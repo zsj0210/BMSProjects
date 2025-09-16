@@ -1,0 +1,458 @@
+---- BMS_InfoInit Matches (3 in 3 files) ----
+Bms_app.c (c:\winshare\automotive\3-1-bms\freertos\bms\user\bms):	BMS_InfoInit();		// 信息管理初始化
+Bms_info.c (c:\winshare\automotive\3-1-bms\freertos\bms\user\bms\core):void BMS_InfoInit(void)
+Bms_info.h (c:\winshare\automotive\3-1-bms\freertos\bms\user\bms\core):void BMS_InfoInit(void);
+---- BMS_SysInitialize Matches (2 in 2 files) ----
+Bms_app.c (c:\winshare\automotive\3-1-bms\freertos\bms\user\bms):void BMS_SysInitialize(void)
+Bms_app.h (c:\winshare\automotive\3-1-bms\freertos\bms\user\bms):void BMS_SysInitialize(void);
+---- rt_thread_create Matches (10 in 10 files) ----
+BMS.build_log.htm (c:\winshare\automotive\3-1-bms\freertos\bms\mdk-arm\bms):BMS\BMS.axf: Error: L6218E: Undefined symbol rt_thread_create (referred from bms_analysis.o).
+Bms_analysis.c (c:\winshare\automotive\3-1-bms\freertos\bms\user\bms\core):	thread = rt_thread_create("analysis",
+Bms_comm.c (c:\winshare\automotive\3-1-bms\freertos\bms\user\bms\core):	thread = rt_thread_create("Comm", 
+Bms_energy.c (c:\winshare\automotive\3-1-bms\freertos\bms\user\bms\core):	thread = rt_thread_create("energy",
+Bms_monitor.c (c:\winshare\automotive\3-1-bms\freertos\bms\user\bms\core):	thread = rt_thread_create("monitor", 
+Bms_protect.c (c:\winshare\automotive\3-1-bms\freertos\bms\user\bms\core):	thread = rt_thread_create("protect", 
+Components.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    tid = rt_thread_create("main", main_thread_entry, RT_NULL,
+Rtthread.h (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\include):rt_thread_t rt_thread_create(const char *name,
+Shell.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):    tid = rt_thread_create(FINSH_THREAD_NAME,
+Thread.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):rt_thread_t rt_thread_create(const char *name,
+---- rt_thread_mdelay Matches (12 in 11 files) ----
+BMS.build_log.htm (c:\winshare\automotive\3-1-bms\freertos\bms\mdk-arm\bms):BMS\BMS.axf: Error: L6218E: Undefined symbol rt_thread_mdelay (referred from bms_analysis.o).
+Bms_analysis.c (c:\winshare\automotive\3-1-bms\freertos\bms\user\bms\core):		rt_thread_mdelay(ANALYSISI_TASK_PERIOD);
+Bms_analysis.c (c:\winshare\automotive\3-1-bms\freertos\bms\user\bms\core):		rt_thread_mdelay(BALANCE_VOLT_RISE_DELAY);
+Bms_comm.c (c:\winshare\automotive\3-1-bms\freertos\bms\user\bms\core):		rt_thread_mdelay(COMM_TASK_PERIOD);
+Bms_energy.c (c:\winshare\automotive\3-1-bms\freertos\bms\user\bms\core):		rt_thread_mdelay(ENERGY_TASK_PERIOD);
+Bms_monitor.c (c:\winshare\automotive\3-1-bms\freertos\bms\user\bms\core):		rt_thread_mdelay(MONITOR_TASK_PERIOD);
+Bms_protect.c (c:\winshare\automotive\3-1-bms\freertos\bms\user\bms\core):		rt_thread_mdelay(PROTECT_TASK_PERIOD);
+Board.c (c:\winshare\automotive\3-1-bms\freertos\bms\mdk-arm\rte\rtos):        rt_thread_mdelay(10);
+Board.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\bsp\_template\cubemx_config):        rt_thread_mdelay(10);
+Drv_softi2c_bq769x0.h (c:\winshare\automotive\3-1-bms\freertos\bms\user\drivers):#define BQ769X0_DELAY(ms)		rt_thread_mdelay(ms)
+Rtthread.h (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\include):rt_err_t rt_thread_mdelay(rt_int32_t ms);
+Thread.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):rt_err_t rt_thread_mdelay(rt_int32_t ms)
+---- rt_tick_from_millisecond Matches (9 in 6 files) ----
+BMS.build_log.htm (c:\winshare\automotive\3-1-bms\freertos\bms\mdk-arm\bms):BMS\BMS.axf: Error: L6218E: Undefined symbol rt_tick_from_millisecond (referred from bms_energy.o).
+Bms_energy.c (c:\winshare\automotive\3-1-bms\freertos\bms\user\bms\core):	BalanceVoltRiseTime = rt_tick_from_millisecond(BALANCE_VOLT_RISE_DELAY) + rt_tick_get();
+Bms_energy.c (c:\winshare\automotive\3-1-bms\freertos\bms\user\bms\core):	BalanceVoltRiseTime = rt_tick_from_millisecond(BALANCE_VOLT_RISE_DELAY) + rt_tick_get();
+Bms_energy.c (c:\winshare\automotive\3-1-bms\freertos\bms\user\bms\core):	tick = rt_tick_from_millisecond(sec * 1000);
+Bms_energy.c (c:\winshare\automotive\3-1-bms\freertos\bms\user\bms\core):			BalanceVoltRiseTime = rt_tick_from_millisecond(BALANCE_VOLT_RISE_DELAY) + rt_tick_get();
+Bms_protect.c (c:\winshare\automotive\3-1-bms\freertos\bms\user\bms\core):	tick = rt_tick_from_millisecond(sec * 1000);
+Clock.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):rt_tick_t rt_tick_from_millisecond(rt_int32_t ms)
+Rtthread.h (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\include):rt_tick_t  rt_tick_from_millisecond(rt_int32_t ms);
+Thread.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    tick = rt_tick_from_millisecond(ms);
+---- osWaitForever Matches (5 in 5 files) ----
+Cmsis_os.h (c:\winshare\automotive\3-1-bms\freertos\bms\drivers\cmsis\rtos2\template):#define osWaitForever       0xFFFFFFFFU ///< Wait forever timeout value.
+Cmsis_os.h (c:\winshare\automotive\3-1-bms\freertos\bms\drivers\cmsis\rtos\template):#define osWaitForever     0xFFFFFFFF     ///< wait forever timeout value
+Cmsis_os.h (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\freertos\source\cmsis_rtos_v2):#define osWaitForever       0xFFFFFFFFU ///< Wait forever timeout value.
+Cmsis_os2.h (c:\winshare\automotive\3-1-bms\freertos\bms\drivers\cmsis\rtos2\include):#define osWaitForever         0xFFFFFFFFU ///< Wait forever timeout value.
+Cmsis_os2.h (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\freertos\source\cmsis_rtos_v2):#define osWaitForever         0xFFFFFFFFU ///< Wait forever timeout value.
+---- rt_tick_get Matches (23 in 9 files) ----
+BMS.build_log.htm (c:\winshare\automotive\3-1-bms\freertos\bms\mdk-arm\bms):BMS\BMS.axf: Error: L6218E: Undefined symbol rt_tick_get (referred from bms_energy.o).
+Bms_energy.c (c:\winshare\automotive\3-1-bms\freertos\bms\user\bms\core):		if (BalanceVoltRiseTime <= rt_tick_get())
+Clock.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):rt_tick_t rt_tick_get(void)
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):    rt_kprintf("current tick:0x%08x\n", rt_tick_get());
+Ipc.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):            tick_delta = rt_tick_get();
+Ipc.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):            tick_delta = rt_tick_get() - tick_delta;
+Ipc.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):            tick_delta = rt_tick_get();
+Ipc.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):            tick_delta = rt_tick_get() - tick_delta;
+Ipc.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):            tick_delta = rt_tick_get();
+Ipc.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):            tick_delta = rt_tick_get() - tick_delta;
+Ipc.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):            tick_delta = rt_tick_get();
+Ipc.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):            tick_delta = rt_tick_get() - tick_delta;
+Mempool.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):            before_sleep = rt_tick_get();
+Mempool.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):            time -= rt_tick_get() - before_sleep;
+Rtthread.h (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\include):rt_tick_t rt_tick_get(void);
+Thread.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    if (rt_tick_get() - *tick < inc_tick)
+Thread.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):        *tick = *tick + inc_tick - rt_tick_get();
+Thread.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    *tick = rt_tick_get();
+Timer.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    timer->timeout_tick = rt_tick_get() + timer->init_tick;
+Timer.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    current_tick = rt_tick_get();
+Timer.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):            current_tick = rt_tick_get();
+Timer.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):        current_tick = rt_tick_get();
+Timer.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):            current_tick = rt_tick_get();
+---- rt_sem_release Matches (26 in 9 files) ----
+BMS.build_log.htm (c:\winshare\automotive\3-1-bms\freertos\bms\mdk-arm\bms):BMS\BMS.axf: Error: L6218E: Undefined symbol rt_sem_release (referred from bms_monitor.o).
+Bms_monitor.c (c:\winshare\automotive\3-1-bms\freertos\bms\user\bms\core):				rt_sem_release(BalanceSem);
+Bms_msh_commond.c (c:\winshare\automotive\3-1-bms\freertos\bms\user\bms\core):	rt_sem_release(BalanceSem);
+Ipc.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):rt_err_t rt_sem_release(rt_sem_t sem)
+Mem.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):            rt_sem_release(&heap_sem);
+Mem.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    rt_sem_release(&heap_sem);
+Mem.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):        rt_sem_release(&heap_sem);
+Mem.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):        rt_sem_release(&heap_sem);
+Mem.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):        rt_sem_release(&heap_sem);
+Mem.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    rt_sem_release(&heap_sem);
+Mem.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    rt_sem_release(&heap_sem);
+Memheap.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):            rt_sem_release(&(heap->lock));
+Memheap.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):        rt_sem_release(&(heap->lock));
+Memheap.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):                rt_sem_release(&(heap->lock));
+Memheap.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):        rt_sem_release(&(heap->lock));
+Memheap.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    rt_sem_release(&(heap->lock));
+Memheap.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    rt_sem_release(&(heap->lock));
+Rtthread.h (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\include):rt_err_t rt_sem_release(rt_sem_t sem);
+Shell.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):    rt_sem_release(&shell->rx_sem);
+Slab.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    rt_sem_release(&heap_sem);
+Slab.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    rt_sem_release(&heap_sem);
+Slab.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):            rt_sem_release(&heap_sem);
+Slab.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    rt_sem_release(&heap_sem);
+Slab.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):        rt_sem_release(&heap_sem);
+Slab.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):            rt_sem_release(&heap_sem);
+Slab.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    rt_sem_release(&heap_sem);
+---- rt_sem_take Matches (20 in 8 files) ----
+BMS.build_log.htm (c:\winshare\automotive\3-1-bms\freertos\bms\mdk-arm\bms):BMS\BMS.axf: Error: L6218E: Undefined symbol rt_sem_take (referred from bms_monitor.o).
+Bms_monitor.c (c:\winshare\automotive\3-1-bms\freertos\bms\user\bms\core):			if (rt_sem_take(BalanceSem, RT_WAITING_NO) == RT_EOK)
+Ipc.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):rt_err_t rt_sem_take(rt_sem_t sem, rt_int32_t time)
+Ipc.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    return rt_sem_take(sem, 0);
+Mem.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    rt_sem_take(&heap_sem, RT_WAITING_FOREVER);
+Mem.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    rt_sem_take(&heap_sem, RT_WAITING_FOREVER);
+Mem.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    rt_sem_take(&heap_sem, RT_WAITING_FOREVER);
+Memheap.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):        result = rt_sem_take(&(heap->lock), RT_WAITING_FOREVER);
+Memheap.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):        result = rt_sem_take(&(heap->lock), RT_WAITING_FOREVER);
+Memheap.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    result = rt_sem_take(&(heap->lock), RT_WAITING_FOREVER);
+Memheap.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    result = rt_sem_take(&(heap->lock), RT_WAITING_FOREVER);
+Rtthread.h (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\include):rt_err_t rt_sem_take(rt_sem_t sem, rt_int32_t time);
+Shell.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):            rt_sem_take(&shell->rx_sem, RT_WAITING_FOREVER);
+Slab.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    rt_sem_take(&heap_sem, RT_WAITING_FOREVER);
+Slab.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    rt_sem_take(&heap_sem, RT_WAITING_FOREVER);
+Slab.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):        rt_sem_take(&heap_sem, RT_WAITING_FOREVER);
+Slab.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    rt_sem_take(&heap_sem, RT_WAITING_FOREVER);
+Slab.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):            rt_sem_take(&heap_sem, RT_WAITING_FOREVER);
+Slab.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):        rt_sem_take(&heap_sem, RT_WAITING_FOREVER);
+Slab.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    rt_sem_take(&heap_sem, RT_WAITING_FOREVER);
+---- rt_timer_create Matches (4 in 4 files) ----
+BMS.build_log.htm (c:\winshare\automotive\3-1-bms\freertos\bms\mdk-arm\bms):BMS\BMS.axf: Error: L6218E: Undefined symbol rt_timer_create (referred from bms_protect.o).
+Bms_protect.c (c:\winshare\automotive\3-1-bms\freertos\bms\user\bms\core):	pTimerProtect = rt_timer_create("relieve", 
+Rtthread.h (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\include):rt_timer_t rt_timer_create(const char *name,
+Timer.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):rt_timer_t rt_timer_create(const char *name,
+---- rt_kprintf Matches (237 in 18 files) ----
+BMS.build_log.htm (c:\winshare\automotive\3-1-bms\freertos\bms\mdk-arm\bms):BMS\BMS.axf: Error: L6218E: Undefined symbol rt_kprintf (referred from drv_soft_i2c.o).
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):    rt_kprintf("Hello RT-Thread!\n");
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):    while (len--) rt_kprintf("-");
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):    rt_kprintf("%-*.s cpu pri  status      sp     stack size max used left tick  error\n", maxlen, item_title); object_split(maxlen);
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):    rt_kprintf(     " --- ---  ------- ---------- ----------  ------  ---------- ---\n");
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):    rt_kprintf("%-*.s pri  status      sp     stack size max used left tick  error\n", maxlen, item_title); object_split(maxlen);
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):    rt_kprintf(     " ---  ------- ---------- ----------  ------  ---------- ---\n");
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                        rt_kprintf("%-*.*s %3d %3d ", maxlen, RT_NAME_MAX, thread->name, thread->oncpu, thread->current_priority);
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                        rt_kprintf("%-*.*s N/A %3d ", maxlen, RT_NAME_MAX, thread->name, thread->current_priority);
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                    rt_kprintf("%-*.*s %3d ", maxlen, RT_NAME_MAX, thread->name, thread->current_priority);
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                    if (stat == RT_THREAD_READY)        rt_kprintf(" ready  ");
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                    else if (stat == RT_THREAD_SUSPEND) rt_kprintf(" suspend");
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                    else if (stat == RT_THREAD_INIT)    rt_kprintf(" init   ");
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                    else if (stat == RT_THREAD_CLOSE)   rt_kprintf(" close  ");
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                    else if (stat == RT_THREAD_RUNNING) rt_kprintf(" running");
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                    rt_kprintf(" 0x%08x 0x%08x    %02d%%   0x%08x %03d\n",
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                    rt_kprintf(" 0x%08x 0x%08x    %02d%%   0x%08x %03d\n",
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):        rt_kprintf("%s", thread->name);
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):            rt_kprintf("/");
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):    rt_kprintf("%-*.s v   suspend thread\n", maxlen, item_title); object_split(maxlen);
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):    rt_kprintf(     " --- --------------\n");
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                    rt_kprintf("%-*.*s %03d %d:",
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                    rt_kprintf("\n");
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                    rt_kprintf("%-*.*s %03d %d\n",
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):    rt_kprintf("%-*.s      set    suspend thread\n", maxlen, item_title); object_split(maxlen);
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):    rt_kprintf(     "  ---------- --------------\n");
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                    rt_kprintf("%-*.*s  0x%08x %03d:",
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                    rt_kprintf("\n");
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                    rt_kprintf("%-*.*s  0x%08x 0\n",
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):    rt_kprintf("%-*.s   owner  hold suspend thread\n", maxlen, item_title); object_split(maxlen);
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):    rt_kprintf(     " -------- ---- --------------\n");
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                rt_kprintf("%-*.*s %-8.*s %04d %d\n",
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):    rt_kprintf("%-*.s entry size suspend thread\n", maxlen, item_title); object_split(maxlen);
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):    rt_kprintf(     " ----  ---- --------------\n");
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                    rt_kprintf("%-*.*s %04d  %04d %d:",
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                    rt_kprintf("\n");
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                    rt_kprintf("%-*.*s %04d  %04d %d\n",
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):    rt_kprintf("%-*.s entry suspend thread\n", maxlen, item_title); object_split(maxlen);
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):    rt_kprintf(     " ----  --------------\n");
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                    rt_kprintf("%-*.*s %04d  %d:",
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                    rt_kprintf("\n");
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                    rt_kprintf("%-*.*s %04d  %d\n",
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):    rt_kprintf("%-*.s  pool size  max used size available size\n", maxlen, item_title); object_split(maxlen);
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):    rt_kprintf(      " ---------- ------------- --------------\n");
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                rt_kprintf("%-*.*s %-010d %-013d %-05d\n",
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):    rt_kprintf("%-*.s block total free suspend thread\n", maxlen, item_title); object_split(maxlen);
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):    rt_kprintf(     " ----  ----  ---- --------------\n");
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                    rt_kprintf("%-*.*s %04d  %04d  %04d %d:",
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                    rt_kprintf("\n");
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                    rt_kprintf("%-*.*s %04d  %04d  %04d %d\n",
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):    rt_kprintf("%-*.s  periodic   timeout       flag\n", maxlen, item_title); object_split(maxlen);
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):    rt_kprintf(     " ---------- ---------- -----------\n");
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                rt_kprintf("%-*.*s 0x%08x 0x%08x ",
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                    rt_kprintf("activated\n");
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                    rt_kprintf("deactivated\n");
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):    rt_kprintf("current tick:0x%08x\n", rt_tick_get());
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):    rt_kprintf("%-*.s         type         ref count\n", maxlen, item_title); object_split(maxlen);
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):    rt_kprintf(     " -------------------- ----------\n");
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                rt_kprintf("%-*.*s %-20s %-8d\n",
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):    rt_kprintf("--Function List:\n");
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):            rt_kprintf("%-16s -- %s\n", index->name, index->desc);
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):            rt_kprintf("%s\n", index->name);
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):        rt_kprintf("[l] %s\n", syscall_item->syscall.name);
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):    rt_kprintf("--Variable List:\n");
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):            rt_kprintf("%-16s -- %s\n", index->name, index->desc);
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):            rt_kprintf("%s\n", index->name);
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):        rt_kprintf("[l] %s\n", sysvar_item->sysvar.name);
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                    rt_kprintf("--function:\n");
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                rt_kprintf("%-16s -- %s\n", index->name, index->desc);
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                rt_kprintf("%s\n", index->name);
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                rt_kprintf("--function:\n");
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):            rt_kprintf("[l] %s\n", syscall_item->syscall.name);
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                    rt_kprintf("--variable:\n");
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                rt_kprintf("%-16s -- %s\n", index->name, index->desc);
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                rt_kprintf("%s\n", index->name);
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                rt_kprintf("--variable:\n");
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):            rt_kprintf("[v] %s\n", sysvar_item->sysvar.name);
+Components.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):        rt_kprintf("initialize %s", desc->fn_name);
+Components.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):        rt_kprintf(":%d done\n", result);
+Components.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    rt_kprintf("do components initialization.\n");
+Components.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):        rt_kprintf("initialize %s", desc->fn_name);
+Components.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):        rt_kprintf(":%d done\n", result);
+Cpuport.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):    rt_kprintf("usage fault:\n");
+Cpuport.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):    rt_kprintf("SCB_CFSR_UFSR:0x%02X ", SCB_CFSR_UFSR);
+Cpuport.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):        rt_kprintf("UNDEFINSTR ");
+Cpuport.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):        rt_kprintf("INVSTATE ");
+Cpuport.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):        rt_kprintf("INVPC ");
+Cpuport.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):        rt_kprintf("NOCP ");
+Cpuport.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):        rt_kprintf("UNALIGNED ");
+Cpuport.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):        rt_kprintf("DIVBYZERO ");
+Cpuport.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):    rt_kprintf("\n");
+Cpuport.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):    rt_kprintf("bus fault:\n");
+Cpuport.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):    rt_kprintf("SCB_CFSR_BFSR:0x%02X ", SCB_CFSR_BFSR);
+Cpuport.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):        rt_kprintf("IBUSERR ");
+Cpuport.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):        rt_kprintf("PRECISERR ");
+Cpuport.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):        rt_kprintf("IMPRECISERR ");
+Cpuport.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):        rt_kprintf("UNSTKERR ");
+Cpuport.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):        rt_kprintf("STKERR ");
+Cpuport.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):        rt_kprintf("SCB->BFAR:%08X\n", SCB_BFAR);
+Cpuport.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):        rt_kprintf("\n");
+Cpuport.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):    rt_kprintf("mem manage fault:\n");
+Cpuport.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):    rt_kprintf("SCB_CFSR_MFSR:0x%02X ", SCB_CFSR_MFSR);
+Cpuport.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):        rt_kprintf("IACCVIOL ");
+Cpuport.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):        rt_kprintf("DACCVIOL ");
+Cpuport.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):        rt_kprintf("MUNSTKERR ");
+Cpuport.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):        rt_kprintf("MSTKERR ");
+Cpuport.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):        rt_kprintf("SCB->MMAR:%08X\n", SCB_MMAR);
+Cpuport.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):        rt_kprintf("\n");
+Cpuport.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):        rt_kprintf("failed vector fetch\n");
+Cpuport.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):        rt_kprintf("debug event\n");
+Cpuport.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):    rt_kprintf("psr: 0x%08x\n", context->exception_stack_frame.psr);
+Cpuport.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):    rt_kprintf("r00: 0x%08x\n", context->exception_stack_frame.r0);
+Cpuport.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):    rt_kprintf("r01: 0x%08x\n", context->exception_stack_frame.r1);
+Cpuport.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):    rt_kprintf("r02: 0x%08x\n", context->exception_stack_frame.r2);
+Cpuport.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):    rt_kprintf("r03: 0x%08x\n", context->exception_stack_frame.r3);
+Cpuport.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):    rt_kprintf("r04: 0x%08x\n", context->r4);
+Cpuport.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):    rt_kprintf("r05: 0x%08x\n", context->r5);
+Cpuport.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):    rt_kprintf("r06: 0x%08x\n", context->r6);
+Cpuport.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):    rt_kprintf("r07: 0x%08x\n", context->r7);
+Cpuport.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):    rt_kprintf("r08: 0x%08x\n", context->r8);
+Cpuport.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):    rt_kprintf("r09: 0x%08x\n", context->r9);
+Cpuport.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):    rt_kprintf("r10: 0x%08x\n", context->r10);
+Cpuport.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):    rt_kprintf("r11: 0x%08x\n", context->r11);
+Cpuport.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):    rt_kprintf("r12: 0x%08x\n", context->exception_stack_frame.r12);
+Cpuport.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):    rt_kprintf(" lr: 0x%08x\n", context->exception_stack_frame.lr);
+Cpuport.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):    rt_kprintf(" pc: 0x%08x\n", context->exception_stack_frame.pc);
+Cpuport.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):        rt_kprintf("hard fault on thread: %s\r\n\r\n", rt_thread_self()->name);
+Cpuport.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):        rt_kprintf("hard fault on handler\r\n\r\n");
+Cpuport.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):    rt_kprintf("shutdown...\n");
+Device.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\device):                rt_kprintf("To initialize device:%s failed. The error code is %d\n",
+Device.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\device):                rt_kprintf("To initialize device:%s failed. The error code is %d\n",
+Drv_can.c (c:\winshare\automotive\3-1-bms\freertos\bms\user\drivers):		rt_kprintf("CAN Config Filter Fail!\r\n");
+Drv_can.c (c:\winshare\automotive\3-1-bms\freertos\bms\user\drivers):		rt_kprintf("CAN Start Fail!\r\n");
+Drv_can.c (c:\winshare\automotive\3-1-bms\freertos\bms\user\drivers):		rt_kprintf("CAN Send Data Fail!\r\n");
+Drv_can.c (c:\winshare\automotive\3-1-bms\freertos\bms\user\drivers):        rt_kprintf("\nGet Rx Message Success!!\r\nData:");
+Drv_can.c (c:\winshare\automotive\3-1-bms\freertos\bms\user\drivers):            rt_kprintf("%d", buffer[i]);
+Drv_rs485.c (c:\winshare\automotive\3-1-bms\freertos\bms\user\drivers):		rt_kprintf("rs485 rx done\r\n");
+Drv_rs485.c (c:\winshare\automotive\3-1-bms\freertos\bms\user\drivers):		rt_kprintf("rs485 tx done\r\n");
+Drv_soft_i2c.h (c:\winshare\automotive\3-1-bms\freertos\bms\user\drivers):#define I2C_INFO(fmt, arg...)   		rt_kprintf("<<-I2C-INFO->> "fmt"\r\n",##arg)
+Drv_soft_i2c.h (c:\winshare\automotive\3-1-bms\freertos\bms\user\drivers):#define I2C_WARNING(fmt, arg...)		rt_kprintf("<<-I2C-WARNING->> "fmt"\r\n",##arg)
+Drv_soft_i2c.h (c:\winshare\automotive\3-1-bms\freertos\bms\user\drivers):#define I2C_ERROR(fmt, arg...)	 		rt_kprintf("<<-I2C-ERROR->> "fmt"\r\n",##arg)
+Kservice.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    rt_kprintf("\n \\ | /\n");
+Kservice.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    rt_kprintf("- RT -     Thread Operating System\n");
+Kservice.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    rt_kprintf(" / | \\     %d.%d.%d build %s\n",
+Kservice.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    rt_kprintf(" 2006 - 2020 Copyright by rt-thread team\n");
+Kservice.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):void rt_kprintf(const char *fmt, ...)
+Kservice.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):        rt_kprintf("(%s) assertion failed at function:%s, line number:%d \n", ex_string, func, line);
+Mem.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):        rt_kprintf("mem init, error begin address 0x%x, and end address 0x%x\n",
+Mem.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):        rt_kprintf("to free a bad data block:\n");
+Mem.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):        rt_kprintf("mem: 0x%08x, used flag: %d, magic code: 0x%04x\n", mem, mem->used, mem->magic);
+Mem.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    rt_kprintf("total memory: %d\n", mem_size_aligned);
+Mem.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    rt_kprintf("used memory : %d\n", used_mem);
+Mem.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    rt_kprintf("maximum allocated memory: %d\n", max_mem);
+Mem.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    rt_kprintf("Memory block wrong:\n");
+Mem.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    rt_kprintf("address: 0x%08x\n", mem);
+Mem.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    rt_kprintf("  magic: 0x%04x\n", mem->magic);
+Mem.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    rt_kprintf("   used: %d\n", mem->used);
+Mem.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    rt_kprintf("  size: %d\n", mem->next - position - SIZEOF_STRUCT_MEM);
+Mem.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    rt_kprintf("\nmemory heap address:\n");
+Mem.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    rt_kprintf("heap_ptr: 0x%08x\n", heap_ptr);
+Mem.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    rt_kprintf("lfree   : 0x%08x\n", lfree);
+Mem.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    rt_kprintf("heap_end: 0x%08x\n", heap_end);
+Mem.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    rt_kprintf("\n--memory item information --\n");
+Mem.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):        rt_kprintf("[0x%08x - ", mem);
+Mem.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):            rt_kprintf("%5d", size);
+Mem.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):            rt_kprintf("%4dK", size / 1024);
+Mem.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):            rt_kprintf("%4dM", size / (1024 * 1024));
+Mem.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):        rt_kprintf("] %c%c%c%c", mem->thread[0], mem->thread[1], mem->thread[2], mem->thread[3]);
+Mem.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):            rt_kprintf(": ***\n");
+Mem.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):            rt_kprintf("\n");
+Msh.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):    rt_kprintf("RT-Thread shell commands:\n");
+Msh.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):            rt_kprintf("%-16s - %s\n", &index->name[6], index->desc);
+Msh.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):            rt_kprintf("%s ", &index->name[6]);
+Msh.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):    rt_kprintf("\n");
+Msh.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):            rt_kprintf("Too many args ! We only Use:\n");
+Msh.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                rt_kprintf("%s ", argv[i]);
+Msh.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):            rt_kprintf("\n");
+Msh.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):    rt_kprintf("%s: command not found.\n", cmd);
+Msh.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):            rt_kprintf("%s\n", dirent->d_name);
+Msh.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                        rt_kprintf("%s\n", dirent->d_name);
+Msh.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                rt_kprintf("%s\n", cmd_name);
+Rtdbg.h (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\include):#define _DBG_COLOR(n)        rt_kprintf("\033["#n"m")
+Rtdbg.h (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\include):    rt_kprintf("\033["#color_n"m[" lvl_name "/" DBG_SECTION_NAME "] ")
+Rtdbg.h (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\include):    rt_kprintf("\033[0m\n")
+Rtdbg.h (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\include):    rt_kprintf("[" lvl_name "/" DBG_SECTION_NAME "] ")
+Rtdbg.h (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\include):    rt_kprintf("\n")
+Rtdbg.h (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\include):        rt_kprintf(fmt, ##__VA_ARGS__);                     \
+Rtdbg.h (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\include):        rt_kprintf(DBG_SECTION_NAME " Here %s:%d\n",        \
+Rtdbg.h (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\include):        rt_kprintf(fmt, ##__VA_ARGS__);                     \
+Rtdbg.h (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\include):#define dbg_raw(...)         rt_kprintf(__VA_ARGS__);
+Rtdebug.h (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\include):        rt_kprintf message;                                                   \
+Rtdebug.h (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\include):        rt_kprintf("Function[%s] shall not be used in ISR\n", __FUNCTION__);  \
+Rtdebug.h (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\include):        rt_kprintf("Function[%s] shall not be used before scheduler start\n", \
+Rtthread.h (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\include):#define rt_kprintf(...)
+Rtthread.h (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\include):void rt_kprintf(const char *fmt, ...);
+Scheduler.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):        rt_kprintf("thread:%s stack overflow\n", thread->name);
+Scheduler.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):        rt_kprintf("warning: %s stack is close to the top of stack address.\n",
+Scheduler.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):        rt_kprintf("warning: %s stack is close to end of stack address.\n",
+Shell.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):        rt_kprintf("finsh: can not find device: %s\n", device_name);
+Shell.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):        rt_kprintf("Password for login: ");
+Shell.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                    rt_kprintf("*");
+Shell.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                    rt_kprintf("\b \b");
+Shell.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                    rt_kprintf("\n");
+Shell.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):            rt_kprintf("Sorry, try again.\n");
+Shell.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):    rt_kprintf("\n");
+Shell.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):    rt_kprintf("%s%s", FINSH_PROMPT, prefix);
+Shell.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):        rt_kprintf("\n");
+Shell.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):        rt_kprintf("%s\n", err_str);
+Shell.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):            rt_kprintf("\t'%c', %d, 0x%08x\n",
+Shell.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):            rt_kprintf("\t%d, 0x%08x\n",
+Shell.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):    rt_kprintf("\r");
+Shell.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):    rt_kprintf("\r");
+Shell.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):    rt_kprintf("\033[2K\r");
+Shell.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):    rt_kprintf("%s%s", FINSH_PROMPT, shell->line);
+Shell.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):            rt_kprintf("Finsh password set failed.\n");
+Shell.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):    rt_kprintf(FINSH_PROMPT);
+Shell.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                    rt_kprintf("\b");
+Shell.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                    rt_kprintf("%c", shell->line[shell->line_curpos]);
+Shell.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                rt_kprintf("\b");
+Shell.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                rt_kprintf("\b%s  \b", &shell->line[shell->line_curpos]);
+Shell.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                    rt_kprintf("\b");
+Shell.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                rt_kprintf("\b \b");
+Shell.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                    rt_kprintf("\n");
+Shell.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                    if (shell->echo_mode) rt_kprintf("\n");
+Shell.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):            rt_kprintf(FINSH_PROMPT);
+Shell.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                rt_kprintf("%s", &shell->line[shell->line_curpos]);
+Shell.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                rt_kprintf("\b");
+Shell.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                rt_kprintf("%c", ch);
+Shell.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):        rt_kprintf("finsh shell already init.\n");
+Shell.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):        rt_kprintf("no memory for shell\n");
+Slab.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):        rt_kprintf("rt_system_heap_init, wrong address[0x%x - 0x%x]\n",
+Slab.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    rt_kprintf("Unexpected byte count %d", n);
+Slab.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    rt_kprintf("total memory: %d\n", heap_end - heap_start);
+Slab.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    rt_kprintf("used memory : %d\n", used_mem);
+Slab.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    rt_kprintf("maximum allocated memory: %d\n", max_mem);
+Timer.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):        rt_kprintf("%d", rt_timer_count_height(timer));
+Timer.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    rt_kprintf("\n");
+---- rt_hw_interrupt_disable Matches (95 in 20 files) ----
+BMS.build_log.htm (c:\winshare\automotive\3-1-bms\freertos\bms\mdk-arm\bms):BMS\BMS.axf: Error: L6218E: Undefined symbol rt_hw_interrupt_disable (referred from drv_soft_i2c.o).
+Clock.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    level = rt_hw_interrupt_disable();
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):    level = rt_hw_interrupt_disable();
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                level = rt_hw_interrupt_disable();
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                level = rt_hw_interrupt_disable();
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                level = rt_hw_interrupt_disable();
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                level = rt_hw_interrupt_disable();
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                level = rt_hw_interrupt_disable();
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                level = rt_hw_interrupt_disable();
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                level = rt_hw_interrupt_disable();
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                level = rt_hw_interrupt_disable();
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                level = rt_hw_interrupt_disable();
+Cmd.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):                level = rt_hw_interrupt_disable();
+Components.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    rt_hw_interrupt_disable();
+context_gcc.S (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):    .global rt_hw_interrupt_disable
+context_gcc.S (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):    .type rt_hw_interrupt_disable, %function
+context_gcc.S (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):rt_hw_interrupt_disable:
+context_iar.S (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):    EXPORT rt_hw_interrupt_disable
+context_iar.S (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):rt_hw_interrupt_disable:
+context_rvds.S (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):rt_hw_interrupt_disable    PROC
+context_rvds.S (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\libcpu\arm\cortex-m3):    EXPORT  rt_hw_interrupt_disable
+Drv_soft_i2c.c (c:\winshare\automotive\3-1-bms\freertos\bms\user\drivers):    level = rt_hw_interrupt_disable();
+Idle.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    level = rt_hw_interrupt_disable();
+Idle.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    level = rt_hw_interrupt_disable();
+Idle.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):        lock = rt_hw_interrupt_disable();
+Ipc.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):        temp = rt_hw_interrupt_disable();
+Ipc.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    temp = rt_hw_interrupt_disable();
+Ipc.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    temp = rt_hw_interrupt_disable();
+Ipc.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):        level = rt_hw_interrupt_disable();
+Ipc.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    temp = rt_hw_interrupt_disable();
+Ipc.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):                    temp = rt_hw_interrupt_disable();
+Ipc.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    temp = rt_hw_interrupt_disable();
+Ipc.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    level = rt_hw_interrupt_disable();
+Ipc.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    level = rt_hw_interrupt_disable();
+Ipc.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):        level = rt_hw_interrupt_disable();
+Ipc.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):        level = rt_hw_interrupt_disable();
+Ipc.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    temp = rt_hw_interrupt_disable();
+Ipc.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):        temp = rt_hw_interrupt_disable();
+Ipc.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    temp = rt_hw_interrupt_disable();
+Ipc.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):        temp = rt_hw_interrupt_disable();
+Ipc.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):        level = rt_hw_interrupt_disable();
+Ipc.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    temp = rt_hw_interrupt_disable();
+Ipc.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):        temp = rt_hw_interrupt_disable();
+Ipc.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    temp = rt_hw_interrupt_disable();
+Ipc.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    temp = rt_hw_interrupt_disable();
+Ipc.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    temp = rt_hw_interrupt_disable();
+Ipc.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    temp = rt_hw_interrupt_disable();
+Ipc.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):        temp = rt_hw_interrupt_disable();
+Ipc.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    temp = rt_hw_interrupt_disable();
+Ipc.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):        level = rt_hw_interrupt_disable();
+Irq.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    level = rt_hw_interrupt_disable();
+Irq.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    level = rt_hw_interrupt_disable();
+Irq.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    level = rt_hw_interrupt_disable();
+Mem.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    level = rt_hw_interrupt_disable();
+Mempool.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):        level = rt_hw_interrupt_disable();
+Mempool.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):        level = rt_hw_interrupt_disable();
+Mempool.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    level = rt_hw_interrupt_disable();
+Mempool.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):        level = rt_hw_interrupt_disable();
+Mempool.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    level = rt_hw_interrupt_disable();
+Object.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    level = rt_hw_interrupt_disable();
+Object.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    level = rt_hw_interrupt_disable();
+Object.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    temp = rt_hw_interrupt_disable();
+Object.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    temp = rt_hw_interrupt_disable();
+Object.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    temp = rt_hw_interrupt_disable();
+Object.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    temp = rt_hw_interrupt_disable();
+Rtdebug.h (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\include):    level = rt_hw_interrupt_disable();                                        \
+Rtdebug.h (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\include):    level = rt_hw_interrupt_disable();                                        \
+Rthw.h (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\include):rt_base_t rt_hw_interrupt_disable(void);
+Rthw.h (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\include):#define rt_hw_spin_lock(lock)     *(lock) = rt_hw_interrupt_disable()
+Scheduler.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):        level = rt_hw_interrupt_disable();
+Scheduler.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    level = rt_hw_interrupt_disable();
+Scheduler.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    temp = rt_hw_interrupt_disable();
+Scheduler.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    temp = rt_hw_interrupt_disable();
+Scheduler.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    level = rt_hw_interrupt_disable();
+Scheduler.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    level = rt_hw_interrupt_disable();
+Shell.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\components\finsh):    level = rt_hw_interrupt_disable();
+Thread.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    level = rt_hw_interrupt_disable();
+Thread.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    level = rt_hw_interrupt_disable();
+Thread.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):        lock = rt_hw_interrupt_disable();
+Thread.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    lock = rt_hw_interrupt_disable();
+Thread.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    level = rt_hw_interrupt_disable();
+Thread.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    temp = rt_hw_interrupt_disable();
+Thread.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    level = rt_hw_interrupt_disable();
+Thread.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):        temp = rt_hw_interrupt_disable();
+Thread.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    temp = rt_hw_interrupt_disable();
+Thread.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    temp = rt_hw_interrupt_disable();
+Timer.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    level = rt_hw_interrupt_disable();
+Timer.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    level = rt_hw_interrupt_disable();
+Timer.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    level = rt_hw_interrupt_disable();
+Timer.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    level = rt_hw_interrupt_disable();
+Timer.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    level = rt_hw_interrupt_disable();
+Timer.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    level = rt_hw_interrupt_disable();
+Timer.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    level = rt_hw_interrupt_disable();
+Timer.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):    level = rt_hw_interrupt_disable();
+Timer.c (c:\winshare\automotive\3-1-bms\freertos\bms\middlewares\third_party\realthread_rtos\src):            level = rt_hw_interrupt_disable();
