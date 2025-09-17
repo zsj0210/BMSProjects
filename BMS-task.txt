@@ -1,0 +1,70 @@
+
+I2C_BusInitialize; //GPIO软件模拟I2C功能初始化，是为了让MCU和BQ芯片通信
+	I2C_BusHardwareInitialize
+BQ769X0_Initialize(&InitData); // 根据指定的初值来初始化BQ芯片
+
+	// 软件初始化
+BMS_MonitorInit();	// 电池监控业务task
+	BMS_MonitorTaskEntry
+		BMS_MonitorBattery;				// 监测电池参数
+			Bms_HalMonitorCellVoltage			// 电池芯片电压
+				BQ769X0_UpdateCellVolt			// 更新单节电芯电压
+					BQ769X0_ReadBlockWithCRC		//上层驱动，也就是bq芯片驱动
+						I2C_TransferMessages		//下层驱动，也就是I2C驱动
+				BubbleSort						// 冒泡排序
+			Bms_HalMonitorBatteryVoltage			// 电池组电压
+				BQ769X0_UpadteBatVolt();		// 更新总电压
+					BQ769X0_ReadRegisterWordWithCRC
+						I2C_TransferMessages
+				BubbleSort						// 冒泡排序
+			Bms_HalMonitorCellTemperature			// 电池的温度
+				BQ769X0_UpdateTsTemp();			// 热敏电阻温度 2s更新一次
+					BQ769X0_WriteRegisterByteWithCRC
+						I2C_TransferMessages
+				BubbleSort						// 冒泡排序
+			Bms_HalMonitorBatteryCurrent			// 电流监测
+				BQ769X0_UpdateCurrent();		// 更新总电流
+					BQ769X0_ReadRegisterWordWithCRC
+					I2C_TransferMessages
+		BMS_MonitorSysMode();				// BMS系统状态（SLEEP、STANDBY）的监控和转换
+BMS_ProtectInit();	// 电池保护业务task
+	BMS_ProtectTaskEntry	
+		BMS_ProtectTiggerMonitor;
+			BMS_ChargeMonitor
+				BMS_HalCtrlCharge
+			BMS_DischargeMonitor
+				BMS_HalCtrlDischarge
+		BMS_ProtectRelieveMonitor;
+			BMS_HalCtrlCharge
+	
+	
+BMS_AnalysisInit();	// 电池分析业务task
+	BMS_AnalysisTaskEntry				// 电池状态分析任务线程入口
+		BMS_AnalysisCapAndSocInit();	// 容量和SOC上电初始化
+		BMS_AnalysisEasy();			// 计算平均电压，压差等
+		BMS_AnalysisCalCap();		 // 温度校准
+			BMS_AnalysisTempCal   
+		BMS_AnalysisSocCheck();    // SOC计算
+			BMS_AnalysisOcvSocCalculate();
+			BMS_AnalysisAHSocCalculate();
+		
+
+BMS_EnergyInit();	// 能量管理业务task
+	BMS_EnergyTaskEntry				// 电池能量管理任务线程入口
+		BMS_EnergyBalanceManage();	// 能量均衡管理
+		BMS_EnergyChgDsgManage();	// 充放电管理
+	BMS_BalanceTimerEntry			// 定时器来处理均衡
+		BMS_HalCtrlCellsBalance(BMS_CELL_ALL, BMS_STATE_DISABLE);
+		
+
+BMS_InfoInit();		// 信息管理业务task
+	BMS_InfoTaskEntry
+		BMS_InfoPrintf
+		BMS_InfoBatCapacityIndicator   		// 电池容量指示灯
+
+
+BMS_CommInit();		// 通信管理业务员task
+	BMS_CommTaskEntry
+
+
+
